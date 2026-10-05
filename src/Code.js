@@ -1,5 +1,5 @@
 // LINE 群組檔案 → Google Drive 自動備份（Google Apps Script）
-// 秘密全部放 Script Properties：LINE_CHANNEL_ACCESS_TOKEN、WEBHOOK_TOKEN、ROOT_FOLDER_ID
+// API Key 放 Script Properties：LINE_CHANNEL_ACCESS_TOKEN、WEBHOOK_TOKEN、ROOT_FOLDER_ID
 
 const TARGET_TYPES = ['image', 'video', 'audio', 'file'];
 const EXT_BY_MIME = {
