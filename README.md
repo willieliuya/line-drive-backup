@@ -39,7 +39,7 @@ pnpm dlx @google/clasp push
 
 ### 4. 填 Script Properties
 
-`pnpm dlx @google/clasp open` 開啟 GAS 編輯器 → 左側齒輪「專案設定」→ **指令碼屬性** → 新增三個：
+`pnpm dlx @google/clasp open` 開啟 GAS 編輯器（看不到 `appsscript.json` 是正常的，編輯器預設隱藏） → 左側齒輪「專案設定」→ **指令碼屬性** → 新增三個：
 
 | 屬性 | 值 |
 |---|---|
@@ -62,7 +62,7 @@ GAS 編輯器右上 **部署 → 新增部署** → 類型選 **網頁應用程�
 回 LINE Developers 的 Messaging API 分頁：
 - **Webhook URL** 填 `<步驟5的URL>?token=<WEBHOOK_TOKEN>`
 - **Use webhook** 開啟
-- 按 **Verify**，應顯示 Success
+- 按 **Verify**。**會顯示 302 錯誤，這是正常的**：GAS 網頁應用程式一律先回 302 轉址，LINE 的 Verify 不跟轉址，但 `doPost` 已經執行完，實際訊息會正常處理。直接用步驟 7 測試即可
 
 ### 7. 測試
 
